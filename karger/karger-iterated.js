@@ -1,7 +1,6 @@
 const fs = require('fs');
 
 const countMinCut = (adj) => {
-//	console.log(adj);
 	if (adj.length === 2) {
 		return adj[0].length - 1;
 	}
@@ -14,11 +13,9 @@ const countMinCut = (adj) => {
 	// find the first neighbor that i
 	const n2name = adj[i][1];
 	const n2 = adj.find(l => l[0] === n2name);
-//	console.log(n1, n2);
 
 	// create a new entry for the adj list with n1 + its current neighbors + n2's neighbors. Remove any refs to n1 and n2
 	const newEntry = contractNodes(n1, n2);
-//	console.log(newEntry);
 	// for all of n2's neighbors, change any references to n2 to become n1
 	for (let i = 0, l = adj.length; i < l; i++) {
 		if (adj[i][0] === n1name || adj[i][0] === n2name) {
@@ -42,9 +39,6 @@ const countMinCut = (adj) => {
 	adj.splice(Math.min(n1index, n2index), 1);
 	adj.push(newEntry);
 
-	// recurse
-	//console.log('contracted ', n1name, n2name);
-	//console.log(adj);
 	return countMinCut(adj);
 };
 
