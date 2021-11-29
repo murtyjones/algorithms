@@ -82,8 +82,8 @@ const ex2 = [
 
 let min = -1;
 
-for (let i = 0, l = 10000; i < l; i++) {
-	const r = countMinCut(rows);
+for (let i = 0, l = 100; i < l; i++) {
+	const r = countMinCut([...rows]);
 	if (r < min || min === -1) {
 		min = r;
 	}
