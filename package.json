@@ -1,0 +1,22 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "count-inversions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/murtyjones/algorithms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/murtyjones/algorithms/issues"
+  },
+  "homepage": "https://github.com/murtyjones/algorithms#readme",
+  "dependencies": {
+    "heap-js": "^2.1.6"
+  }
+}
